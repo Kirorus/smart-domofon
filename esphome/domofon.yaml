@@ -4,10 +4,11 @@
 ############# User configuration #############
 
 substitutions:
-  # NodeMCU v3 board
-  board: nodemcuv2
-  pin_relay_answer: D0
-  pin_relay_open: D1
+  name: intercom_wemos
+  platform: ESP8266
+  board: d1_mini
+  pin_relay_answer: D2
+  pin_relay_open: D6
   pin_led_red: D2
   pin_led_green: D3
   pin_led_blue: D4
@@ -31,7 +32,10 @@ substitutions:
   call_end_detect_delay: 3000ms     # Interval between rings to detect incoming call
   relay_before_answer_delay: 10ms   # Delay before answer call
   relay_answer_on_time: 1500ms      # Delay between answer call and open/close door
-  relay_open_on_time: 600ms         # How long the "open door button" will be pressed
+  
+  
+  
+  _on_time: 600ms         # How long the "open door button" will be pressed
   relay_after_open_delay: 500ms     # Delay in "answer" state after opening door
   short_click_time_from: 50ms       # Short button click min time
   short_click_time_to: 1000ms       # Long button click min time
